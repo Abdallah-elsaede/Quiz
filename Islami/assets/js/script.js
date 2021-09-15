@@ -30,6 +30,11 @@ let q2Display = document.querySelector("#question-2");
 let q3Display = document.querySelector("#question-3");
 let q4Display = document.querySelector("#question-4");
 let q5Display = document.querySelector("#question-5");
+let q6Display = document.querySelector("#question-6");
+let q7Display = document.querySelector("#question-7");
+let q8Display = document.querySelector("#question-8");
+let q9Display = document.querySelector("#question-9");
+let q10Display = document.querySelector("#question-10");
 let completedDisplay = document.querySelector("#completedDisplay");
 let highscoreDisplay = document.querySelector("#highscoreDisplay");
 
@@ -76,6 +81,36 @@ let answers = {
         answer2: document.querySelector("#q5A2"),
         answer3: document.querySelector("#q5A3"),
         answer4: document.querySelector("#q5A4")
+    },
+    question6: {
+        answer1: document.querySelector("#q6A1"),
+        answer2: document.querySelector("#q6A2"),
+        answer3: document.querySelector("#q6A3"),
+        answer4: document.querySelector("#q6A4")
+    },
+    question7: {
+        answer1: document.querySelector("#q7A1"),
+        answer2: document.querySelector("#q7A2"),
+        answer3: document.querySelector("#q7A3"),
+        answer4: document.querySelector("#q7A4")
+    },
+    question8: {
+        answer1: document.querySelector("#q8A1"),
+        answer2: document.querySelector("#q8A2"),
+        answer3: document.querySelector("#q8A3"),
+        answer4: document.querySelector("#q8A4")
+    },
+    question9: {
+        answer1: document.querySelector("#q9A1"),
+        answer2: document.querySelector("#q9A2"),
+        answer3: document.querySelector("#q9A3"),
+        answer4: document.querySelector("#q9A4")
+    },
+    question10: {
+        answer1: document.querySelector("#q10A1"),
+        answer2: document.querySelector("#q10A2"),
+        answer3: document.querySelector("#q10A3"),
+        answer4: document.querySelector("#q10A4")
     }
 };
 
@@ -164,12 +199,22 @@ function hideAllQuestions() {
     q3Display.classList.add("hide");
     q4Display.classList.add("hide");
     q5Display.classList.add("hide");
+    q6Display.classList.add("hide");
+    q7Display.classList.add("hide");
+    q8Display.classList.add("hide");
+    q9Display.classList.add("hide");
+    q10Display.classList.add("hide");
 
     q1Display.classList.remove("show");
     q2Display.classList.remove("show");
     q3Display.classList.remove("show");
     q4Display.classList.remove("show");
     q5Display.classList.remove("show");
+    q6Display.classList.remove("show");
+    q7Display.classList.remove("show");
+    q8Display.classList.remove("show");
+    q9Display.classList.remove("show");
+    q10Display.classList.remove("show");
 }
 
 
@@ -215,22 +260,16 @@ startQuizDisplay.addEventListener("click", function (event) {
 // This runs Question 1
 function question1() {
     
-    // Displays Section Content
     q1Display.classList.add("show");
     q1Display.classList.remove("hide");
 
     q1Display.addEventListener("click", function (event) {
-        // Coniditionals to validate if the correct answer is selected
+        
     if (event.target.type === "button" && event.target === answers.question1.answer2) {
-
-        // Flashes correct text
         showCorrect();
-
-        // Hides Current Question Section
         q1Display.classList.remove("show"); 
         q1Display.classList.add("hide");
 
-        // Goes to next question
         question2();
 
     } else if (event.target.type === "button" &&
@@ -238,7 +277,6 @@ function question1() {
         event.target === answers.question1.answer3 ||
         event.target === answers.question1.answer4) {
 
-        // Flashes wrong text
         showWrong();
     }
     });
@@ -251,7 +289,6 @@ function question1() {
 // This runs Question 2
 function question2() {
     
-    // Displays Section Content
     q2Display.classList.add("show");
     q2Display.classList.remove("hide");
 
@@ -259,10 +296,8 @@ function question2() {
         // Conditionals to validate if the correct answer is selected
         if (event.target.type === "button" && event.target === answers.question2.answer2) {
 
-            // Flashes correct text
             showCorrect();
 
-            // Hides Current Question Section
             q2Display.classList.remove("show"); 
             q2Display.classList.add("hide");
 
@@ -274,7 +309,7 @@ function question2() {
             event.target === answers.question2.answer3 ||
             event.target === answers.question2.answer4) {
 
-            // Flashes wrong text
+
             showWrong();
         }
     });
@@ -286,18 +321,15 @@ function question2() {
 // This runs Question 3
 function question3() {
     
-    // Displays Section Content
     q3Display.classList.add("show");
     q3Display.classList.remove("hide");
 
     q3Display.addEventListener("click", function (event) {
-        // Coniditionals to validate if the correct answer is selected
+        
         if (event.target.type === "button" && event.target === answers.question3.answer3) {
 
-            // Flashes correct text
             showCorrect();
 
-            // Hides Current Question Section
             q3Display.classList.remove("show"); 
             q3Display.classList.add("hide");
 
@@ -309,7 +341,7 @@ function question3() {
             event.target === answers.question3.answer2 ||
             event.target === answers.question3.answer4) {
 
-            // Flashes wrong text
+
             showWrong();
         }
     });
@@ -320,23 +352,19 @@ function question3() {
 // This runs Question 4
 function question4() {
     
-    // Displays Section Content
     q4Display.classList.add("show");
     q4Display.classList.remove("hide");
 
     q4Display.addEventListener("click", function (event) {
-        // Coniditionals to validate if the correct answer is selected
+        
         if (event.target.type === "button" && 
         event.target === answers.question4.answer1) {
 
-            // Flashes correct text
             showCorrect();
 
-            // Hides Current Question Section
             q4Display.classList.remove("show"); 
             q4Display.classList.add("hide");
 
-            // Goes to next question
             question5();
 
         } else if (event.target.type === "button" &&
@@ -344,7 +372,7 @@ function question4() {
             event.target === answers.question4.answer3 ||
             event.target === answers.question4.answer4) {
 
-            // Flashes wrong text
+
             showWrong();
         }
     });
@@ -355,32 +383,54 @@ function question4() {
 // This runs Question 5
 function question5() {
     
-    // Displays Section Content
     q5Display.classList.add("show");
     q5Display.classList.remove("hide");
 
     q5Display.addEventListener("click", function (event) {
-        // Coniditionals to validate if the correct answer is selected
+        
         if (event.target.type === "button" && event.target === answers.question5.answer2) {
 
-            // Flashes correct text
             showCorrect();
 
-            // Hides Current Question Section
             q5Display.classList.remove("show"); 
             q5Display.classList.add("hide");
 
-            // Goes to completed screen
-            quizComplete();
+            question6();
 
         } else if (event.target.type === "button" &&
             event.target === answers.question5.answer1 ||
             event.target === answers.question5.answer4 ||
             event.target === answers.question5.answer3) {
 
-            // Flashes wrong text
+
             showWrong();
         }
+    });
+}
+
+// This runs Question 6
+function question6() {
+    
+    q6Display.classList.add("show");
+    q6Display.classList.remove("hide");
+
+    q6Display.addEventListener("click", function (event) {
+        
+    if (event.target.type === "button" && event.target === answers.question6.answer2) {
+        showCorrect();
+        q6Display.classList.remove("show"); 
+        q6Display.classList.add("hide");
+
+        // Goes to next question
+        question7();
+
+    } else if (event.target.type === "button" &&
+        event.target === answers.question6.answer1 ||
+        event.target === answers.question6.answer3 ||
+        event.target === answers.question6.answer4) {
+
+        showWrong();
+    }
     });
 }
 
@@ -388,40 +438,154 @@ function question5() {
 // —————————————————————————————————————————————————————
 
 
-// This runs the Completed Screen
+// This runs Question 7
+function question7() {
+    
+    q7Display.classList.add("show");
+    q7Display.classList.remove("hide");
+
+    q7Display.addEventListener("click", function (event) {
+       
+        if (event.target.type === "button" && event.target === answers.question7.answer2) {
+
+            showCorrect();
+
+            q7Display.classList.remove("show"); 
+            q7Display.classList.add("hide");
+
+            // Goes to next question
+            question8();
+
+        } else if (event.target.type === "button" &&
+            event.target === answers.question7.answer1 ||
+            event.target === answers.question7.answer3 ||
+            event.target === answers.question7.answer4) {
+
+
+            showWrong();
+        }
+    });
+}
+
+// —————————————————————————————————————————————————————
+
+
+// This runs Question 8
+function question8() {
+    
+    q8Display.classList.add("show");
+    q8Display.classList.remove("hide");
+
+    q8Display.addEventListener("click", function (event) {
+        
+        if (event.target.type === "button" && event.target === answers.question8.answer3) {
+
+            showCorrect();
+
+            q8Display.classList.remove("show"); 
+            q8Display.classList.add("hide");
+
+            // Goes to next question
+            question9();
+
+        } else if (event.target.type === "button" &&
+            event.target === answers.question8.answer1 ||
+            event.target === answers.question8.answer2 ||
+            event.target === answers.question8.answer4) {
+
+
+            showWrong();
+        }
+    });
+}
+
+// —————————————————————————————————————————————————————
+
+// This runs Question 9
+function question9() {
+    
+    q9Display.classList.add("show");
+    q9Display.classList.remove("hide");
+
+    q9Display.addEventListener("click", function (event) {
+        
+        if (event.target.type === "button" &&  event.target === answers.question9.answer1) {
+
+            showCorrect();
+
+            q9Display.classList.remove("show"); 
+            q9Display.classList.add("hide");
+
+            // Goes to next question
+            question10();
+
+        } else if (event.target.type === "button" &&
+            event.target === answers.question9.answer2 ||
+            event.target === answers.question9.answer3 ||
+            event.target === answers.question9.answer4) {
+
+
+            showWrong();
+        }
+    });
+}
+
+// —————————————————————————————————————————————————————
+
+// This runs Question 10
+function question10() {
+    
+    q10Display.classList.add("show");
+    q10Display.classList.remove("hide");
+
+    q10Display.addEventListener("click", function (event) {
+        
+        if (event.target.type === "button" && event.target === answers.question10.answer2) {
+
+            showCorrect();
+
+            q10Display.classList.remove("show"); 
+            q10Display.classList.add("hide");
+
+            // Goes to completed screen
+            quizComplete();
+
+        } else if (event.target.type === "button" &&
+            event.target === answers.question10.answer1 ||
+            event.target === answers.question10.answer4 ||
+            event.target === answers.question10.answer3) {
+
+
+            showWrong();
+        }
+    });
+}
+
 function quizComplete() {
 
-    // ensures that last section and the feedback section do not appear
     completedDisplay.classList.remove("show"); 
     completedDisplay.classList.add("hide");
     hideFeedbackSection();
     
-    // Forces Interval to Clear
     for(let a=0; a<100; a++){
         window.clearInterval(a);
     }
 
-    // Displays final score based on time left
     finalScore.textContent = timerAmount;
 
-    // Replaces timer text with 0
     timeLeft.textContent = "0";
         
-    // Hide all Sections
     hideAllQuestions();
 
-    // Displays Section Content
     completedDisplay.classList.add("show");
     completedDisplay.classList.remove("hide");
 
     completedDisplay.addEventListener("click", function (event) {
         
-        // Coniditionals to validate if form was submitted
         if (event.target.type === "submit") {
             event.preventDefault();
             inputValue = inputId.value; 
 
-            // Hides Completed Screen
             completedDisplay.classList.remove("show"); 
             completedDisplay.classList.add("hide");
 
@@ -432,48 +596,34 @@ function quizComplete() {
     });
 }
 
-
-// —————————————————————————————————————————————————————
-
-
-// This runs the highscore Screen
 function highscores() {
 
 
-    // Displays Section Content
     highscoreDisplay.classList.add("show");
     highscoreDisplay.classList.remove("hide");
 
-    // This makes sure the list only generates if a form inout is made
     if (inputValue) {
         let userScore = document.createElement("li");
         finalScore = finalScore.textContent;
         userScore.textContent = `${inputValue} scored ${finalScore} points`; 
 
-        // Adds li with initals and score to the "scores" ul element
         scoreList.append(userScore);
     }
 
     
-    // Controls high score buttons
     highscoreDisplay.addEventListener("click", function (event) {
         
-        // Coniditionals to validate if form was submitted
-        if (event.target.type === "button" && event.target === playAgainBtn) { 
+        if (event.target.type === "button" && event.target === playAgainBtn) {
 
-            // Hides Completed Screen
             highscoreDisplay.classList.remove("show"); 
             highscoreDisplay.classList.add("hide");
 
-            // Goes to start section
             startQuizDisplay.classList.add("show");
             startQuizDisplay.classList.remove("hide");
         }
 
-        // Coniditionals to validate if form was submitted
         else if (event.target.type === "button" && event.target === clearBtn) { 
 
-            // Deletes all the li elements
             scoreList.innerHTML = "";
         }
     });
@@ -481,11 +631,6 @@ function highscores() {
 
 }
 
-
-// —————————————————————————————————————————————————————
-
-
-// Navbar Highscore Event Listner 
 navHighscore.addEventListener("click", function(event) {
     if (event.target.type === "button" && event.target === this) {
         hideStartSection();
