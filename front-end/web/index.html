@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اختبار تاريخ</title>
+    <title>Web Dev Quiz</title>
 
     <!-- Favicon -->
     <link rel="icon" href="./assets/img/gk-logo.png" type="image/gif">
@@ -18,9 +18,9 @@
         <nav class="navbar">
             <p class="m-0 nav__timer">Timer: <span id="timeLeft">0</span>s</p>
             <a href="index.html">
-                <span class="img-fluid mx-auto navbar__logo">AZ</span>
+                <span class="img-fluid mx-auto navbar__logo">ELSA3EDY</span>
             </a>
-            <button type="button" id="viewScore">النتائج</button>
+            <button type="button" id="viewScore">Highscores</button>
             
             <a class="menu" href="../index.html">Home</a>
             <a class="menu" href="../aboutUs.html">About Us</a>
@@ -34,13 +34,13 @@
         <!-- Start Screen -->
         <section class="row start-content mt-5">
             <div class="col-md-12 mb-5">
-                <h1><code>&lt;تاريخ></code><br>اساله متنوعه</h1>
+                <h1><code>&lt;WebDev></code><br>Challenge Quiz</h1>
             </div>
             <div class="col-md-12 d-flex flex-column">
                 <p class="mb-5 lead">
-                    اختبر معلوماتك الدينية في هذه الاختبارات حيث ستعرف كم حصيلتك المعلوماتية بجانب إمكانية زيادتها من خلال الإطلاع على الإجابات الصحيحة نهاية الاختبار .. ولا تنسى مشاركة أصدقائك هذه الاختبارات ليستفيد الجميع 😊
+                    Answer questions about <code>HTML</code>, <code>CSS</code>, <code>JavaScript</code> and more—before the timer runs out. Get an answer wrong and your time is reduced. The more time left, the higher your score.
                 </p>
-                <button type="button" id="startQuiz" class="btn btn--main-style btn--lg-pad btn-lg align-self-center">صلي علي النبي وابدأ</button>
+                <button type="button" id="startQuiz" class="btn btn--main-style btn--lg-pad btn-lg align-self-center">Start Quiz</button>
             </div>
             
         </section>
@@ -48,19 +48,19 @@
         <!-- Question 1 -->
         <section id="question-1" class="row hide mt-5 mb-4">
             <div class="col-md-12 mb-3">
-                <h3>السؤال الاول</h3>
-                <p class="question--style">في أي سنة انتحر هتلر؟</p>
+                <h3>Q1 — js</h3>
+                <p class="question--style"><strong>Operators: </strong> What does <code>||</code> mean in JavaScript?</p>
                 <button type="button" id="q1A1" class="btn btn--main-style">
-                    1. 1950
+                    1. And
                 </button>
                 <button type="button" id="q1A2" class="btn btn--main-style">
-                    2. 1945 
+                    2. Or
                 </button>
                 <button type="button" id="q1A3" class="btn btn--main-style">
-                    3. 1947
+                    3. Concatenate
                 </button>
                 <button type="button" id="q1A4" class="btn btn--main-style">
-                    4. 1946
+                    4. All of the above
                 </button>
             </div>
         </section>
@@ -68,19 +68,19 @@
         <!-- Question 2 -->
         <section id="question-2" class="row hide mt-5 mb-4">
             <div class="col-md-12 mb-3 ">
-                <h3>السؤال الثاني</h3>
-                <p class="question--style">أي فرعون مصري آمن بفكرة إله واحد؟</p>
+                <h3>Q2 — html</h3>
+                <p class="question--style"><strong>Tables:</strong> Besides <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> what is another semantic structure element?</p>
                 <button type="button" id="q2A1" class="btn btn--main-style">
-                    1. توت عنخ آمون
+                    1. &lt;tfoot&gt;
                 </button>
                 <button type="button" id="q2A2" class="btn btn--main-style">
-                    2. أخناتون
+                    2. &lt;tfooter&gt;
                 </button>
                 <button type="button" id="q2A3" class="btn btn--main-style">
-                    3. نفرتيتي
+                    3. &lt;tcell&gt;
                 </button>
                 <button type="button" id="q2A4" class="btn btn--main-style">
-                    4. خوفو
+                    4. &lt;trow&gt;
                 </button>
             </div>
         </section>
@@ -88,19 +88,19 @@
         <!-- Question 3 -->
         <section id="question-3" class="row hide mt-5 mb-4">
             <div class="col-md-12 mb-3 ">
-                <h3>السؤال الثالث</h3>
-                <p class="question--style"> كم مرة سُرقت لوحة الموناليزا؟</p>
+                <h3>Q3 — CSS</h3>
+                <p class="question--style"><strong>Color:</strong> What does the last number in this set represent? <code>rgba(0, 0, 0, .3);</code></p>
                 <button type="button" id="q3A1" class="btn btn--main-style">
-                    1. ثلاث مرات
+                    1. Blur
                 </button>
                 <button type="button" id="q3A2" class="btn btn--main-style">
-                    2. مرتين
+                    2. Tint
                 </button>
                 <button type="button" id="q3A3" class="btn btn--main-style">
-                    3.  مره واحد
+                    3. Alpha
                 </button>
                 <button type="button" id="q3A4" class="btn btn--main-style">
-                    4. عشر مرات
+                    4. Blue
                 </button>
             </div>
         </section>
@@ -108,19 +108,19 @@
         <!-- Question 4 -->
         <section id="question-4" class="row hide mt-5 mb-4">
             <div class="col-md-12 mb-3 ">
-                <h3>السؤال الرابع</h3>
-                <p class="question--style">من هو الخليفة العباسي الذي كانت مدة حكمه يوم واحد فقط؟</p>
+                <h3>Q4 — JS</h3>
+                <p class="question--style"><strong>Conditionals:</strong> Besides <code>NaN</code> select another "Falsy" value.</p>
                 <button type="button" id="q4A1" class="btn btn--main-style">
-                    1. الخليفة عبدالله بن المعتز
+                    1. An empty string ""
                 </button>
                 <button type="button" id="q4A2" class="btn btn--main-style">
-                    2. الخليفة محمد بن المعتز
+                    2. Special characters "@ % #"
                 </button>
                 <button type="button" id="q4A3" class="btn btn--main-style">
-                    3. الخليفة عباس بن المعتز
+                    3. const = wrong;
                 </button>
                 <button type="button" id="q4A4" class="btn btn--main-style">
-                    4. الخليفة خالد بن المعتز
+                    4. var = denied;
                 </button>
             </div>
         </section>
@@ -128,19 +128,19 @@
         <!-- Question 5 -->
         <section id="question-5" class="row hide mt-5 mb-4">
             <div class="col-md-12 mb-3 ">
-                <h3>السؤال الخامس</h3>
-                <p class="question--style"> ما هي أقدم حضارة في التاريخ؟</p>
+                <h3>Q5 — CSS</h3>
+                <p class="question--style"><strong>Browser Support:</strong> Which of the below choices is <i>not</i> an approved vendor prefix.</p>
                 <button type="button" id="q5A1" class="btn btn--main-style">
-                    1. الحضاره الفرعونيه
+                    1. -moz-
                 </button>
                 <button type="button" id="q5A2" class="btn btn--main-style">
-                    2. حضارة بلاد الرافدين.
+                    2. -ms-
                 </button>
                 <button type="button" id="q5A3" class="btn btn--main-style">
-                    3. حضارة بلاد العراق. 
+                    3. -webkit-
                 </button>
                 <button type="button" id="q5A4" class="btn btn--main-style">
-                    4. حضارة بلاد الروم.
+                    4. -pre-chrome-
                 </button>
             </div>
         </section>
@@ -148,17 +148,17 @@
         <!-- Complete Screen -->
         <section id="completedDisplay" class="row mt-5 mb-4 hide">
             <div class="col-md-12 mb-3">
-                <h2>انتهة الاساله</h2>
+                <h2>Quiz Completed!</h2>
                 <h4>Score: <span id="finalScore">0</span></h4>
             </div>
             <div class="col-md-12 mb-5 completed__form">
-                <p>اكتب اسمك علشان نسجل النتيجه</p>
+                <p>Enter your initials for the score board:</p>
                 <form class="form-inline justify-content-center">
                     <div class="form-group mx-sm-3 mb-2">
-                      <label for="inputId" class="sr-only">اسمك</label>
-                      <input type="text" class="form-control" id="inputId" placeholder="اكتب اسمك">
+                      <label for="inputId" class="sr-only">Initials</label>
+                      <input type="text" class="form-control" id="inputId" placeholder="Your Initials">
                     </div>
-                    <button type="submit" class="btn btn--main-style mb-2">حفظ</button>
+                    <button type="submit" class="btn btn--main-style mb-2">Save</button>
                 </form>
             </div>
         </section>
@@ -166,18 +166,18 @@
         <!-- High Scores Screen -->
         <section id="highscoreDisplay" class="row mt-5 mb-4 hide">
             <div class="col-md-12 mb-3">
-                <h2>النتائج</h2>
+                <h2>Highscores</h2>
             </div>
             <div class="col-md-12 mb-5">
                 <ul class="scores">
                 </ul>
                 <div class="row btn-group">
                     <button type="button" id="playAgainBtn" class="btn btn--main-style align-self-center">
-                        اعادة الاختبار
+                        Retake quiz
                     </button>
 
                     <button type="button" id="clearBtn" class="btn btn--main-style">
-                        مسح النتائج
+                        Clear Scores
                     </button>
                     
                 </div>
